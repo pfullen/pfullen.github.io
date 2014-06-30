@@ -1,9 +1,11 @@
 $(document).ready(function () {
 	
-	var fizzBuzz = function (number) {
+var fizzBuzz = function (num1) {
+		var answer = +num1;   // convert string to integer 
+    
 		var div = document.getElementById('textDiv');
 		
-		for (var i=0; i<=number ; i++) {
+		for (var i=0; i<=answer ; i++) {
 		
 		if (i%3===0 && i%5===0) {
 			div.innerHTML += "fizz buzz," ;
@@ -32,7 +34,6 @@ var userInput = prompt("Please enter a number between 1 and 100:");
 fizzBuzz(userInput);	
 	
 
-		
  					
 			
 		});
