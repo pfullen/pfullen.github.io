@@ -1,5 +1,6 @@
 $(document).ready(function () {
-	
+
+// function starts here	
 var fizzBuzz = function (num1) {
 		var answer = +num1;   // convert string to integer 
     
@@ -26,10 +27,10 @@ var fizzBuzz = function (num1) {
 	
 				
 	}
+// End of function 
 
 
-
-
+// main code
 var userInput = prompt("Please enter a number between 1 and 100:");
 fizzBuzz(userInput);	
 	
