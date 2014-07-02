@@ -85,6 +85,11 @@ $(document).ready(function(){
   console.log('The random # is ' + getNum);
  	$('span').html(0);
  	
+ 	var userGuess =
+				$('input[name="userGuess"').val("");
+				
+				guessCount = 0;
+ 			$('span').html(guessCount);
  })
 
 
