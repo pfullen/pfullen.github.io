@@ -327,14 +327,14 @@ h3.guessBox {
 }
 
 
-.hot {
+h2.hot {
 	
 	background-color: red;
 	
 }
 
 
-h2#feedback.cold{
+h2.cold {
 
 
 background-color: blue;

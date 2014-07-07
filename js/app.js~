@@ -43,53 +43,117 @@ $(document).ready(function(){
 // Compare Results function
 	function compareResults (guess,randomNum) {
     
-    var compare = guess - randomNum;
+    var currentResult = guess - randomNum;
     var correct = "You guessed the correct Number"; 
     var hot = "You are hot!!!";
     var cold = "You are cold!!!";
-    // convert to positive number if result is negative 
-    if (compare < 0) {
+    var hotter = "You are getting hotter!!!";
+    var colder = "You are getting colder!!!";    
+    var same = "You guess is just as close as your last guess!";
+    // convert current result  to absolute number 
     
-		compare = compare * (-1);            
-    }        
+    currentResult = Math.abs(currentResult);
     
-    if (compare===0) {
+  
+
+   console.log(currentResult);
+   console.log( lastResult);
+   
+    
+    if (currentResult===0) {
    console.log(correct);
     $('#feedback').html(correct);    
     
-   } else if (compare < 10) {
+    }    else if (lastResult === null) {    
+          // inner if to compare first result
+     if (currentResult <= 10) {
    $('#feedback').html(hot);    
+ 
 	console.log(hot);
    
-   } else if (compare > 10) {
+   } else if (currentResult >= 10) {
     $('#feedback').html(cold);
+
 	console.log(cold); 
-   }
+   }  // close inner if on first guess
+}
        
+        //  if to compare subsequent guesses to see if player is getting hotter or colder
+      	
+         else if (currentResult < lastResult) {
+     		 $('#feedback').html(hotter);
+     		
+     		}   else if (currentResult > lastResult) {
+			  $('#feedback').html(colder);     		
+     		
+     		}
+         
+     lastResult = currentResult;
+     
+     }    
+     
+        
+             
        
       	 
-  	 }
+  	  	 
+  	 
+  	 
+  	 
+// reset function 
+
+ /* function resetPage () {
+  	 var guessCount = 0;
+    var lastUserGuess =0;
+  	
+  	var userGuess =
+				$('input[name="userGuess"').val("");    //  reset user guess input field
+		
+		guessCount = 0;
+ 			$('span').html(guessCount);
+ 			
+ 			$('#feedback').html('Make your Guess!');
+ 			$('ul.guessBox').html('<li> Your Guesses: </li>');		
+				('span').html(0);
+  }
+  	 
+  	 
+  	 */
   	 
  //  *************Main code*************
     var guessCount = 0;
-  
+    var lastResult =null;
+    
   // get random number on startup
+  
+ // var resetNow = resetPage ();
   var getNum = randomNum();
   console.log('The random # is ' + getNum);
 
 
 // start new Game when users clicks new game button
  $('.new').click(function () {
- 	
+
+ 	 lastResult =null;
+ 	 currentResult=null;
+   console.log('The Last Result # is ' + lastResult);
  	var getNum = randomNum();
   console.log('The random # is ' + getNum);
+  
  	$('span').html(0);
  	
- 	var userGuess =
+ 
+ 	
+ 	var userGuess = 
 				$('input[name="userGuess"').val("");
 				
 				guessCount = 0;
  			$('span').html(guessCount);
+ 			
+ 			$('#feedback').html('Make your Guess!');
+ 	
+ 	      $('ul#guessList').html('');
+ 	
  })
 
 
@@ -107,12 +171,17 @@ $('#guessButton').click(function () {
 		
 			var getUserGuess = userGuess();
         	
-          var result = compareResults(getUserGuess,getNum);
-       	 $('ul #guessList').add(
- 	 			'<li  > your guessed </li>' 
+          var result = +(compareResults(getUserGuess,getNum));
+         
+          
+    
+       	 $('ul#guessList').prepend(
+ 	 			'<li>' + getUserGuess + '</li>'
+ 	 			
+ 	 	     
  	 			);	
        	 
-          
+       
    })
 
 
