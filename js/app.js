@@ -1,5 +1,74 @@
  $(document).ready(function(){
 	
+	
+
+
+
+// Quiz Object
+
+function Quiz (){
+
+var studentAnswer;
+var questionNum;
+var newQuestion;
+var anaswered=0;
+var score;
+var i;
+var x;
+
+
+
+
+// init method
+this.init = function () {
+    questionNum = 0;    
+    answered= 0;
+	 score = 0;
+    i = 0; 
+    x = 0;
+this.loadNextQuestion();
+this.handleEvents();
+this.showQuizValues();
+}
+
+
+//  get Question Method     sets up question object
+this.questionObj = function(question, possibleAnswers, correctAnswer) {
+
+this.question = question;
+this.possibleAnswers = possibleAnswers;
+this.correctAnswer = correctAnswer;
+
+
+
+}//   End of get Question Method
+
+
+// submit event method
+  // this.submitMethod = function () {
+   	  
+//		}
+
+// end of submit event method
+
+// validate answer method
+this.validateAnswer = function (studentAnswer) {
+	this.studentAnswer = studentAnswer;
+	console.log("this" + this.studentAnswer);
+	
+	
+	console.log(questionNum);
+	console.log("I's value is " + i);
+	//console.log ("Student answer is " + this.studentAnswer + " Real answer is " + this.question [i][2]);
+	if (this.studentAnswer == questions [i][2] ) {
+		score++	
+	} console.log(i);
+	i++;
+}  // close compareAnswer method
+
+
+//  handle events method
+this.handleEvents = function () {
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
     	$(".overlay").fadeIn(1000);
@@ -10,162 +79,137 @@
   	$("a.close").click(function(){
   		$(".overlay").fadeOut(1000);
   	});
+  	
+	$('form').submit(function(event){ 
+  			 event.preventDefault(); 
+  		});		
+            	
+  	$(document).on('click', 'input#guessButton', function (){
+ 		 studentAnswer = $("input:radio[name=Answer]:checked").val();		
+ 		 answered++
+ 		 questionNum++
+ 		  
+ 		 console.log("This is student answer on the click " + studentAnswer);
+ 		
+quiz1.validateAnswer(studentAnswer);
+  if (answered == 5){
+   
+   $('#feedback').html("You answered " + score + " out of " + newQuestion.length );
 
-// Quiz Object
+   
+     } else { 
+     
+		 quiz1.loadNextQuestion();
+		// console.log("attempting to load the next question");
+		 quiz1.showQuizValues();
+ 	
+ 	}
+  	
+ 	});
+  	
+  	$('.new').click(function () {
+  	
+  		
+ this.init();
+  	});
+  	
+};
 
-function Quiz (studentAnswer){
 
-this.studentAnswer = studentAnswer;
-
+// end of handle events method
 
 
-var question = ["Test Question 1", "Test Question 2",
- 					"Test Question 3" , "Test Question 4",
- 					"Test Question 5"];
-										
-var correctAnswer = ["A", "p", "L", "*" , "g"];								
-			
-var possibleAnswers = [["A", "B", "C", "D"] ,["z","p","q","t"], ["0","8","L","s"],["B","7","*","+"],["g","w","g","v"]];
 
 
-// Compare answer method
-this.compareAnswer = function () {
-	console.log("the student answer in the object is " + studentAnswer);
-	console.log("The correct anawer in the object is " + correctAnswer[i]);
-	console.log("this" + this.studentAnswer);
-	if (this.studentAnswer == correctAnswer[i] ) {
-		return 1;	
-	} else {
-		return 0;
-	}
-}  // close compareAnswer method
 
-// new quiz method
+// display display quiz values message method
+this.showQuizValues = function () {
+	
+	var progress = questionNum + 1;
+	$('p').html("Question " + progress + " out of " + newQuestion.length);
+  console.log("You answered " + answered + " questions");
+   
+}
+
+// end of display message method
+
+
+
+
+
+
+
+
+
+
+// init  method   -    when new quiz is clicked
 this.newQuiz = function () {
+		
  	
- 	location.reload(); 
- 	
- }; // close newQuiz method
+   this.init();
+   
+	} 
+ 	  	
+ // close newQuiz method
+
+
 
 
 // load question method
 
-this.loadQuestion = function () {
-	
-var nextQuestion = question[i];
-var nextAnswers = possibleAnswers[i];
-
-i++
-return [nextQuestion ,nextAnswers, i];
+this.loadNextQuestion = function (questionNumber) {
+	 newQuestion = this.question;     // This cycles through the questions array and picks the first item in the array which is the question 
+	// console.log(newQuestion[0]);
+	// console.log(newQuestion[1]);
+	// console.log(newQuestion [1][0]);
+//	 console.log(newQuestion[2][1]) ;
+	// console.log(newQuestion[1,2]);
+	console.log("X equals " + x);
+	console.log("i equals " + i );
+	 $('#feedback').html(newQuestion[i][0]);
+//	 $('input:radio[name=Answer]').remove();  // remove prior questions possible answers
+	$('form').html('<input type="hidden" name "Answer" value="0">');
+	for ( x=0;  x < newQuestion[2][1].length ; x++ ) {     // this loops through the possible answers
+		      $('form').append('<input  type = "radio" name="Answer" value="' + x + '">' +  newQuestion[i][1][x] + '<br>');
+		      
+				}
+		//	console.log(newQuestion[1]);
+		
+			$('form').append('<input type="submit" id="guessButton" class="button" name="submit" value="Submit"/>');
 
 } // end of loadQuestion Method
+
+
+
+
+
+
+
 
 
 };  // End of Quiz Object
 
 
+// Main   
 
-
-
-
-	 
- //  *************Main code*************
-    
-    // initalize variables   & get first question on page load  
-    var i = 0;
-    var questionNum = 1;
+	var questions = Array();
+	questions[0] =  [["How Many Moons Does Saturn Have?"],   ["62", "31" , "57", "4"], ["1"]];
+	questions[1] =  [["How Long Does it Take Jupiter to Orbit the Sun?"],  ["100 Days", "335 Days" , "4332 Days", "12 Days"], ["2"]];
+	questions[2] =  [["What Type of Galaxy is the Milky Way?"], ["Boxed", "Spiral" , "Square", "Elliptical"], ["1"]];
+	questions[3] =  [["What is the closet star outside out solar system?"],   ["Wolf 359", "Lalande 21185 " , "Sirius", "Alpha Centauri"], ["3"]];
+	questions[4] =  [["How many tons of Hydrogen does the Sun burn each second?"],   ["10 million", "5 million" , "600 million", "125 million"], ["2"]];
+	
+	
+	
+	
+	var quiz1 = new Quiz();
+	
+	quiz1.questionObj(questions);
+ // console.log("These are the Questions" + questions);
+ 	quiz1.init();
    
-    var question = "";
-    var possibleAnswers = "";
-   
-    var studentAnswer;
-
-
-   
-    $('#feedback').html(question[i]);
-    var numCorrect =0;
-     
-  
-     
-
-
-// refresh page when when users clicks new game button
- $('.new').click(function () {
- 	
- 	quiz1.newQuiz();
- 
- 	
- });
-
-
-// Prevent default page refresh when submit is clicked
-$('form').submit(function(event){ 
-  			 event.preventDefault(); 
-  			
-       //   console.log(guessCount);
-
-})
-
-//  get the students answer and compare it to actual answer
-$('input#guessButton').click(function () {
-		 alert("u clicked me");
-		
-				 studentAnswer = $("input:radio[name=Answer]:checked").val();			 
-			 			   console.log("TEst student Answer" + studentAnswer);
-          $("#feedback").html(studentAnswer);
-         console.log(studentAnswer);
-       if (studentAnswer != ""  ){      
-        var quiz1 = new Quiz(studentAnswer);
-     		var result = quiz1.compareAnswer();
-          console.log("This is the result" + result);
-         
-			if (result == 0) {
-			console.log("incorrect");
-			
-			}  else if (result == 1){
-				console.log("correct");
-           numCorrect++  ;        
-          
-          }
-   }
-          
-			var loadNext = quiz1.loadQuestion( );
-         question = loadNext[0];
-         possibleAnswers = loadNext[1];
-         var index = loadNext[2];
-         console.log("you clicked submit");
-          $('#feedback').html(question);
-         // $('form').text("");
-          $('input').remove();
-          
-          $('form').html('<input type="hidden" name "Answer" value="0">' +  
-				'<input  type = "radio" name="Answer" value="A">' +  possibleAnswers[0] + '<br>' +
-				'<input type = "radio" name="Answer" value="B">' + possibleAnswers[1] + '<br>' +
-				'<input  type = "radio" name="Answer" value="C">' + possibleAnswers[2]  + '<br>' +
-				'<input  type = "radio" name="Answer" value="D">' + possibleAnswers [3]  + '<br>' +
-				'<input type="submit" id="guessButton" class="button" name="submit" value="Submit"/>' ); 
-      
-      		
-      	$('span').html(index);
-      	console.log("the index is " + index);
-
-
-		
-          console.log(question);
-          console.log(possibleAnswers);
-          
-          
-         
-          });
-          
-          
-       
-        });
-
-
-
-
-
+	
+});
 
 
 
