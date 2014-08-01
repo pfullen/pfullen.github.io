@@ -110,7 +110,7 @@ quiz1.validateAnswer(studentAnswer);
   	$('.new').click(function () {
   	
   		
- this.init();
+ quiz1.init();
   	});
   	
 };
