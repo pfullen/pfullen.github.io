@@ -12,7 +12,7 @@
 		<div class="intro">
 			<div class="left stack-image"></div>
 			<div class="explanation">
-				<h1>Weather Underground current conditions</h1>
+				<h1>Weather Underground Current/Forecast weather</h1>
 				<p>Weather Underground is a commercial weather service that provides real-time weather information via the Internet. Weather Underground provides weather reports for most major cities across the world on its Web site, as well as local weather reports for newspapers and Web sites. Most of its United States information comes from the National Weather Service (NWS), as information from that agency is within the public domain by federal law. The Web site is available in many languages, and an ad-free version of the site with additional features is available for an annual fee. Since 2012, it has been owned by The Weather Company, also owners of The Weather Channel.</p>
 				<p>This App makes an API call and returns weather data based on location</p>
 			</div>
