@@ -1,0 +1,507 @@
+
+/*** CSS RESET ***/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End CSS RESET */
+
+
+
+/**  MOBILE LAYOUT  (portrait and landscape) **/
+@media only screen and (min-width : 320px) {
+
+	/**  M-BASE  **/
+	body {
+		background-color: #fff;
+		font-family: 'Museo300', helvetica, tahoma, arial, sans-serif;
+		font-size: 100%;
+	}
+
+	header {
+		display: none;
+	}
+
+	h1 {
+		color: #555;
+		font-family: 'nevis', helvetica, tahoma, arial, sans-serif;	
+		font-size: 200%;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	h2 {
+		color: #fff;
+		font-family: 'nevis', helvetica, tahoma, arial, sans-serif;	
+		text-transform: uppercase;
+	}
+		
+	img {
+		max-width: 100%;  /* This rule will make all images x percent as wide as their parents. */
+	}
+
+
+	/**  M-LAYOUT  **/	
+	.clear-it {
+		clear: both;
+	}
+	
+	.code-or-web {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+		
+	.code-or-web li {
+		display: inline-block;
+	}
+	
+	.code-or-web li img {
+		max-width: 50%;
+	}
+	
+	.content-container {
+		background: #fff;
+		padding-top: 1px; /*  This is to prevent */
+		margin-top: -1px; /*  margin collapsing  */
+		width: 100%;
+	}
+	
+	.inner {
+		width: 80%;
+	}
+	
+	.options-container {
+		display: table;
+		margin: 0 auto;
+		width: 100%
+	}
+	
+	.page {
+		height: auto;
+		padding-top: 1px; /*  This is to prevent */
+		margin-top: -1px; /*  margin collapsing  */
+		max-width: 100%;
+		
+	}
+	
+	.spaced-top-bottom {
+		margin: 25px auto;
+	}
+
+	.to-center {
+		margin: 0 auto;
+	}
+
+	
+	
+	/**  M-MODULE  **/
+	footer {
+		display: none;
+	}
+	
+	#home {
+		background-image: url('../img/sailboat.jpg');	
+	   background-repeat: no-repeat 125% 75%;
+		
+		
+		
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: 120% ;
+		height:  746px;
+		position: relative;
+	 
+	}
+	
+	#home img {
+	
+	height 130%;	
+	
+	
+	
+	}
+	
+
+	#portfolio {
+			background: #3f4c6b; /* Old browsers */
+		background: -moz-linear-gradient(top,  #3f4c6b 0%, #3f4c6b 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3f4c6b), color-stop(100%,#3f4c6b)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #3f4c6b 0%,#3f4c6b 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #3f4c6b 0%,#3f4c6b 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #3f4c6b 0%,#3f4c6b 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #3f4c6b 0%,#3f4c6b 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#3f4c6b',GradientType=0 ); /* IE6-9 */
+
+		/*background-image: url('..img/dark.png'); 	/* My thanks to Subtle Patterns for being just plain awesome. */
+		margin-bottom: 0px;
+		
+	}
+
+
+
+	/**  M-THEME  **/
+	.center-text {
+		text-align: center;
+	}
+
+	.circle {
+		background-color: #fff;
+		border-radius: 100%;
+		height: 300px;
+		margin: -150px 0 0 -150px;
+		opacity: 0.5;
+		  filter: alpha(opacity=50);  /* IE8 and lower */
+		  zoom: 1;  /* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */
+		position: absolute;
+		  top: 50%;
+		  left: 70%;
+		width: 300px;  /* A circle too big will push it and its text off of the home page. */
+	}
+
+	.circle-text {
+		color: #333;
+		font-family: 'nevis', helvetica, tahoma, arial, sans-serif;
+		line-height: 150%;
+		padding-top: 75px;
+
+	}
+	
+	.contact-text {
+		text-align: center;
+		background-color: #1d48ad;
+		border-radius: 100px;
+		font-size: 15px;
+		font-weight: bold;
+      text-align: center;
+      padding:  40px;
+		
+	}
+
+	
+
+	.icon {
+		max-width: 25%;
+	}
+	
+	.page-title {
+		background-color: #1d48ad;
+		height: 50px;
+		line-height: 50px;
+		width: 250px;
+	}
+	
+	#profile{
+		height: 750px;	
+		background: #365EBF;
+		
+		color:white;
+		font-size: 22px;
+	   padding-bottom: 15px;
+	}	
+	
+	.profile-text {
+		text-align: center;
+		line-height: 150%;
+	}
+	
+
+	@font-face {
+	    font-family: 'nevis';
+	    src: url('nevis-webfont.eot');
+	    src: url('fonts/nevis-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/nevis-webfont.woff') format('woff'),
+	         url('fonts/nevis-webfont.ttf') format('truetype'),
+	         url('fonts/nevis-webfont.svg#webfontbold') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+	@font-face {
+	    font-family: 'Museo300';
+	    src: url('fonts/Museo300-Regular-webfont.eot');
+	    src: url('fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('fonts/Museo300-Regular-webfont.woff') format('woff'),
+	         url('fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+	         url('fonts/Museo300-Regular-webfont.svg#Museo300') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+}
+
+
+
+
+/**  TABLET LAYOUT  **/
+@media only screen and (min-width : 768px) {	
+	/**  T-THEME  **/
+	.circle {
+		margin: -200px 0 0 -200px;
+		height: 400px;
+		width: 400px;  /* A circle too big will push it and its text off of the home page. */	
+	}
+	
+	.circle-text {
+		padding-top: 125px;
+
+	}
+	
+	.contact-text, .contact-map, .profile-image, .profile-text {
+		float: left;
+	}
+	
+	
+	
+   #contact {
+   background-image: url('../img/map.jpg');
+		background-repeat: no-repeat;
+		background-size: cover; 
+		  
+		color:white;
+		height: 125%;
+          
+      }	
+      
+      #contact img {
+      
+      
+      
+      }
+	
+	.contact-text, .profile-image {
+		max-width: 50%;
+		margin-bottom: 25px;
+		text-align: center;
+	}
+	
+	.contact-map, .profile-text {
+		margin-left: 3%;
+		margin-bottom: 25px;
+		text-align: left;
+		width: 57%;
+	}
+	
+	.icon {
+		max-width: 10%;
+	}
+	
+	.location, .reach-me {
+		float: left;
+		width: 50%;
+	}
+	
+	.shadow {
+		-moz-box-shadow: 0 2px 3px #efefef;
+		-webkit-box-shadow: 0 2px 3px #efefef;
+		box-shadow: 0 2px 3px #efefef;
+	}
+}
+
+
+
+
+/**  DESKTOP LAYOUT **/
+@media only screen and (min-width : 1140px) {
+	
+	/**  D-LAYOUT  **/
+	.code-or-web li img {
+		max-width: 100%;  /* These are the Chrome and GitHub icons */
+	}
+	
+	
+	body {
+	
+	/*background-color: gray;*/	
+	
+	
+	}	
+	
+
+   header {
+	
+	background-color: white;
+	height: 50px;   
+   
+   
+   
+   }	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.grid {
+		float: left;
+		margin-bottom: 25px;  /* Aligns the portfolio images. */
+		max-width: 49%;
+		position: relative;
+	}
+
+.grid img {
+
+ width: 619px;
+ height: 311px;
+
+
+}
+	
+	#home {
+		margin-top: 50px; /* Adjusted for the fixed top nav. */
+
+	}
+	
+	.options-container {
+		height: 100%;
+		opacity: 0;
+		-webkit-transition: opacity 0.4s ease-in-out;
+		-moz-transition: opacity 0.4s ease-in-out;
+		-o-transition: opacity 0.4s ease-in-out;
+		transition: opacity 0.4s ease-in-out;
+	}
+	
+	.right {
+		margin-left: 2%;
+	}
+	
+	
+	/**  D-MODULE  **/
+	header {
+		background-color: #fff;
+		display: block;
+		font-family: 'nevis', helvetica, tahoma, arial, sans-serif;	
+		position: fixed;
+		  top: 0;
+		  left: 0;
+		height: 50px;
+		width: 100%;
+		z-index: 1;
+	}
+
+	footer {
+		border-top: 1px solid #ccc;
+		color: #777;
+		display: block;
+		font-size: 60%;
+		font-weight: bold;
+		height: 50px;
+		line-height: 50px;
+		width: 100%;
+	}
+	
+	#logo {
+		float: left;
+		width: 30%;
+	}
+	
+	nav {
+		display: block;
+		float: right;	
+		font-size: 82%; /* 13px/16px = 82% */
+		line-height: 50px;
+		text-align: right;
+		width: 70%;
+	}
+
+	nav li {
+		display: inline;
+		padding: 0;
+		width: 100%;
+	}
+
+	
+
+	/**  D-STATE  **/
+	.grid-hover {
+		height: 100%;
+		position: absolute;
+		  top: 0;
+		  right: 0;
+		width: 100%;
+	}
+
+	nav ul li a {
+		color: #555;
+		padding: 10px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	
+	.options-container:hover {
+		background-color: black;
+		opacity: .5;
+	}
+	
+	
+	/**  D-THEME  **/
+	.icon {
+		max-width: 5%;
+	}
+	
+	.logo-text {
+		color: #555;
+		font-size: 150%;
+		line-height: 50px;
+		padding-left: 10px;
+		text-transform: uppercase;
+	}
+	
+	
+	
+	
+	.profile-image {
+		border-radius: 100%;
+		max-width: 25%;
+	}
+}
