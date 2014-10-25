@@ -71,6 +71,7 @@
 				<div class="inner to-center cz-color-0">
 					<img class="profile-image  clear-it cz-color-0" src="img/mypic.jpg" data-hoverimg="img/mypic.jpg">
 					<p class="profile-text cz-color-0">
+					<br>
 						I have over 20 years experience in Accounting , Tax and Consulting.   I also assists businesses in setting up cloud based business applications.  
 						I am experienced in mySQL and MSSQL databases.   My development experience includes PHP and JAVA.
 						Over the past year (2014) I have also added HTML5, CSS3 and jQuery to my tool belt.  Thanks to the ThinkFul Front-End course and working closely with a
@@ -100,7 +101,7 @@
 				<div class="inner to-center">
 					<div class="grid">
 						<div class="grid-image">
-							<img src="img/37signals.png">
+							<img src="img/signals.png">
 						</div>
 					</div>
 					
