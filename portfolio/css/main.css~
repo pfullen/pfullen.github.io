@@ -401,13 +401,20 @@ table {
 .grid-hover img {
 
 
-width:150px;
-height:150px;
+width:100px;
+height:100px;
 
 
 }
 
+.contact-hover {
 
+background-color: darkred;
+height: 200px;
+width: 300px;
+font-size: 25px;
+
+}
 
 	
 	#home {

@@ -407,7 +407,14 @@ height:100px;
 
 }
 
+.contact-hover {
 
+background-color: darkred;
+height: 200px;
+width: 300px;
+font-size: 25px;
+
+}
 
 	
 	#home {
