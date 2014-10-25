@@ -56,6 +56,29 @@ background-repeat: no-repeat;
 	padding-bottom: 10px;
 }
 
+
+.results-container {
+
+background-image: url('sky.jpg');	
+
+	background: cover;
+
+background-repeat: no-repeat;
+	clear: both;
+
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+
+
+
+}
+
+
+
+
+
 .stack p {
 
 

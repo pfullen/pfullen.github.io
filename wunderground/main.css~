@@ -12,7 +12,7 @@ background-repeat: no-repeat;
 
 p  {
 font-family: Arial;
-color: antiquewhite;
+color: white;
 font-size: 18px;
 }
 
@@ -55,6 +55,29 @@ background-repeat: no-repeat;
 	text-align: center;
 	padding-bottom: 10px;
 }
+
+
+.results-container {
+
+background-image: url('sky.jpg');	
+
+	background: cover;
+
+background-repeat: no-repeat;
+	clear: both;
+
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+
+
+
+}
+
+
+
+
 
 .stack p {
 
