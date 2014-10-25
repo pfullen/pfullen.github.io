@@ -1,0 +1,103 @@
+
+
+body {
+
+background-image: url('pic.jpg');	
+
+background-repeat: no-repeat;
+
+
+}
+
+
+p  {
+font-family: Arial;
+color: white;
+font-size: 18px;
+}
+
+.container {
+	margin: 3em auto;
+	width: 600px;
+}
+
+.hidden {
+	display: none;
+}
+
+.left {
+	float: left;
+}
+
+.stack-image {
+	background: url('images/Weath_undergr_logo14.png') no-repeat center center;
+	width: 180px;
+	height: 141px;
+/*	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+  margin-right: 1em;
+  border-radius: 5px;
+}
+
+.intro {
+	margin-bottom: 1em;
+}
+.stack {
+	background-image: url('sky.jpg');	
+
+	background: cover;
+
+background-repeat: no-repeat;
+	clear: both;
+
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.stack p {
+
+
+font-size: 20px;
+font-weight: bold;
+color: black;
+text-align: center;
+
+}
+
+
+.inspiration { 
+	margin-left: 3em;
+}
+
+.result {
+	border: 1px solid black;
+	padding: 5px;
+	margin: 0 auto 1em auto;
+}
+
+.result2 {
+	border: 1px solid black;
+	padding: 5px;
+	margin: 0 auto 1em auto;
+}
+
+.error {
+	background-color: #F78181;
+	padding: 1em;
+}
+
+
+h1 {
+   font-family: Arial;
+	color: white;
+
+}
+
+
+h3  {
+font-family: Arial;
+color: black;
+font-size: 30px;	
+	}

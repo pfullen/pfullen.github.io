@@ -1,0 +1,157 @@
+ $(document).ready(function(){
+	
+	
+
+
+
+// Quiz Object
+
+function Quiz (){
+
+this.studentAnswer = studentAnswer;
+this.score =0;
+this.answered = 0;
+var questionNum = 1;
+var questions = Array();
+
+
+
+
+
+
+// init method
+this.init = function () {
+this.loadNextQuestion();
+this.handleEvents();
+
+}
+
+
+//  get Question Method     sets up question object
+this.questionObj = function(questions, possibleAnswers, correctAnswer) {
+
+this.questions = questions;
+this.possibleAnswers = possibleAnswers;
+this.correctAnswer = correctAnswer;
+
+
+
+}//   End of get Question Method
+
+
+
+
+//  handle events method
+this.handleEvents = function () {
+	/*--- Display information modal box ---*/
+  	$(".what").click(function(){
+    	$(".overlay").fadeIn(1000);
+
+  	});
+
+  	/*--- Hide information modal box ---*/
+  	$("a.close").click(function(){
+  		$(".overlay").fadeOut(1000);
+  	});
+}
+
+ $(document).on('click', 'input#guessBuutton', function (){
+ 	this.submitMethod();
+ 	
+ 	});
+// end of handle events method
+
+
+
+// submit event method
+   this.submitMethod = function () {
+   	   var studentAnswer = $("input:radio[name=Answer]:checked").val();		
+			this.validateAnswer (studentAnswer);
+			this.loadNextQuestion();
+			this.showQuizValues();
+		}
+
+// end of submit event method
+
+
+
+// display display quiz values message method
+this.showQuizValues = function () {
+	$('p').html("Qusetion" + answered + "out of " questions.length)
+
+
+}
+
+// end of display message method
+
+
+
+
+
+// validate answer method
+this.validateAnswer = function (studentAnswer) {
+	this.studentAnswer = studentAnswer;
+	console.log("this" + this.studentAnswer);
+	if (this.studentAnswer == questions [i][2] ) {
+		score++	
+	} 
+}  // close compareAnswer method
+
+
+
+
+
+// init  method   - rewrite code to init
+this.newQuiz = function () {
+ 	this.loadNextQuestion();
+   this.handleEvents();
+	} 
+ 	  	
+ // close newQuiz method
+
+
+
+
+// load question method
+
+this.loadNextQuestion = function (questionNumber) {
+	 newQuestion = questions[i][0];     // This cycles through the questions array and picks the first item in the array which is the question 
+	 $('#feedback').html(newQuestion);
+	 $('input:radio[name=Answer]').remove();  // remove prior questions possible answers
+	$('form').html('<input type="hidden" name "Answer" value="0">');
+	for (x=0; ; x < questions[i][1].length ; x++ ) {     // this loops through the possible answers
+		      $('form').append('<input  type = "radio" name="Answer" value="A">' +  questions[i].possibleAnswers[x] + '<br>');
+				}
+i++
+
+} // end of loadQuestion Method
+
+
+
+//  Create Quiz data
+
+// data   
+
+questions[0] = quiz.questionObj("This is test Question one",   ["A", "B" , "C", "D"], "B");
+questions[1] = quiz.questionObj ("This is test Question two",   ["Z", "X" , "E", "T"], "E");
+questions[2] = quiz.questionObj ("This is test Question Three", ["F", "K" , "L", "D"], "K");
+questions[3] = quiz.questionObj ("This is test Question Four",  ["T", "Q" , "C", "Y"], "T" );
+questions[4] = quiz.questionObj ("This is test Question Five",  ["R", "W" , "E", "P"], "P");
+
+
+// end of data
+
+
+
+
+
+
+};  // End of Quiz Object
+	var quiz1 = new quiz();
+	quiz1.init();
+});
+
+
+
+
+

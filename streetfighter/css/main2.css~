@@ -1,0 +1,21 @@
+body {
+ 
+}
+ 
+.container {
+  background-color: white;
+  margin-top: 110px;
+  min-width: 1200px;
+  padding-left: 100px;
+  height: 500px;
+  position: relative;
+}
+
+
+.ryu-cool {
+	display: none;
+  background-image: url('../images/ryu-cool.gif');
+  width: 659px;
+  height: 494px;
+}
+}

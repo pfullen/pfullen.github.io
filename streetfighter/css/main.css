@@ -1,0 +1,213 @@
+body {
+  background-color: black;
+}
+ 
+.main {
+  background-color: white;
+  background-image: url('../images/background.jpg');
+  margin-top: 110px;
+  min-width: 1200px;
+  padding-left: 100px;
+  height: 500px;
+  position: relative;
+
+}
+
+.main background:img {
+
+width:1100px;
+height: 500px;
+
+
+
+
+
+}
+ 
+.hadouken, .ryu-cool, .ryu-ready,.ryu-kick,  .ryu-still, .ryu-throwing, .main {
+  background-repeat: no-repeat;
+} 
+  
+.hadouken {
+  background-image: url('../images/hadouken.gif');
+  width: 156px; 
+  height: 90px;
+  display: none;
+  float: left;
+  position: relative;
+  top: 167px;
+  left: -212px;
+} 
+ 
+ 
+
+.ryu-container, .ryu {
+  float: left;
+  position: relative;
+
+}
+ 
+.ryu-ready, .ryu-still, .ryu-throwing , .ryu-cool, .ryu-kick{
+  width: 659px;
+  height: 494px;
+}
+ 
+.ryu-ready, .ryu-throwing, .ryu-cool, .ryu-kick  {
+  display: none;
+} 
+ 
+.ryu-kick {
+   background-image: url('../images/picture3.gif');
+   
+} 
+ 
+ 
+ .ryu-cool {
+  background-image: url('../images/ryu-cool.gif');
+}
+
+ 
+ 
+.ryu-ready {
+  background-image: url('../images/ryu-ready-position.gif');
+}
+ 
+.ryu-still {
+  background-image: url('../images/ryu-standing-still.png');
+}
+ 
+.ryu-throwing {
+  background-image: url('../images/ryu-throwing-hadouken.png');
+}
+
+.hadouken {
+  background-image: url('../images/hadouken.gif');
+  width: 156px; 
+  height: 90px;
+  float: left;
+  position: relative;
+  top: 168px;
+  left: -130px;
+  float: left;
+}
+
+
+
+
+.instructions {
+height: 118px;
+width: 210px;
+margin: 0 auto;
+margin-top: 10px;
+border: 2px red;
+border-radius: 5px;
+background-color: white;
+font-family: Arial, sans-serif;
+padding-bottom: 5px;
+padding-top: 0px;
+border-top-color: white 2px;
+
+}
+
+.instructions h1{
+
+font-size: 1.5em;
+color: red;
+font-weight: bold;
+text-align: center;
+border-style:solid;
+border-bottom: thin black;
+background-color: black;
+
+border-top-color: red;
+
+
+}
+
+.instructions ol {
+
+font-size: .8em;
+padding:10px;
+list-style: square;
+margin-left: 10px;
+border: 2px red;
+}
+
+
+.instructions p {
+font-size: .7em;
+text-align: center;
+
+
+}
+
+
+.score {
+display:none;
+
+height: 75px;
+width: 120px;
+float:right;
+border-radius:5px;
+
+background-color: white;
+font-family: Arial, sans-serif;
+margin-right:40px;
+border-top-color: white 2px;
+}
+
+.score h1{
+
+font-size: 1.5em;
+color: red;
+font-weight: bold;
+text-align: center;
+border-style:solid;
+padding-top: 10px;
+border-bottom: thin black;
+background-color: black;
+
+border-top-color: red;
+
+
+}
+
+
+
+
+.score h2{
+
+font-size: 1em;
+color: black;;
+font-weight: bold;
+text-align: center;
+border-style:solid;
+padding-top: 15px;
+border-bottom: thin black;
+background-color: white;
+
+border-top-color: red;
+
+text-align: center;
+}
+
+
+.score p {
+
+
+position:relative;
+padding-top: 20px;
+margin-right: 50px;
+float: right;
+font-size: 1.5em;
+color: black;
+
+}
+
+
+
+
+
+
+
+

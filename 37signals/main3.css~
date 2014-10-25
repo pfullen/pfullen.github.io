@@ -1,0 +1,23 @@
+section div {
+display: inline;
+margin: 0 auto;
+text-align: center;
+}
+
+img {
+	display: inline;
+	float: left;
+ 	height:143px;
+ 	width: 104px;
+ 	text-align: left; 
+ 	margin-left: 15px;
+}
+
+figcaption {
+
+color: #369;
+font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+font-size: 5px;
+text-align: center;
+
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+
+<form action="pdo-db-practice.php" method="post">
+<p>Your Name: <input type="text" name="Name" /><br />
+Age: <input type="text" name="Age" /></p>
+Gender: <input type="text" name="Gender" /></p>
+Birthday: <input type="text" name="Birthday" /></p>
+
+
+<p><input type="submit" value="Send it!"></p>
+</form>
+
+
+
+</body>
+</html>

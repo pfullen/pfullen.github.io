@@ -1,0 +1,32 @@
+<?php
+
+if (php_sapi_name() != 'cli') echo '<pre>'.PHP_EOL;
+require_once('./db_config.php');
+
+switch($_GET['action']){
+				case 'list':
+				$params = $params = array(`sort`=>$jtSorting, `index`=> $jtStartIndex,`size` =>$jtPageSize );
+				$sql = 'ELECT * FROM salesorders ORDER BY :sort LIMIT :index , :size '  ;
+				$rows = $cMySQL->execQ($sql, $params);
+				Use $cMySQL->getPDOError();
+				
+				//Return result to jTable
+				$jTableResult = array();
+				$jTableResult['Result'] = "OK";
+				$jTableResult['TotalRecordCount'] = $recordCount;
+				$jTableResult['Records'] = $rows;
+				print json_encode($jTableResult);
+					
+					break;
+				}
+catch(Exception $ex)
+{
+    //Return error message
+	$jTableResult = array();
+	$jTableResult['Result'] = "ERROR";
+	$jTableResult['Message'] = $ex->getMessage();
+	print json_encode($jTableResult);
+}
+
+
+?>

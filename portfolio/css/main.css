@@ -396,6 +396,19 @@ table {
 
 
 }
+
+
+.grid-hover img {
+
+
+width:100px;
+height:100px;
+
+
+}
+
+
+
 	
 	#home {
 		margin-top: 50px; /* Adjusted for the fixed top nav. */
