@@ -110,6 +110,17 @@
 							<img src="img/hot-or-cold.png">
 						</div>
 					</div>
+					<div class="grid-hover">
+							<div class="options-container">
+								<ul class="code-or-web">
+									<li>
+										<a href="http://pfullen.github.io/hotorcold/index.html" target="_blank">
+											<img src="img/github-white-64.png">
+										</a>
+									</li>
+									
+								</ul>
+							</div><!-- Ends div options-container -->
 
 					<div class="grid">													
 						<div class="grid-image">
@@ -128,15 +139,11 @@
 							<div class="options-container">
 								<ul class="code-or-web">
 									<li>
-										<a href="https://github.com/roseemmons/unit2-shopping-list/tree/gh-pages" target="_blank">
+										<a href="http://pfullen.github.io/37signals/index.html" target="_blank">
 											<img src="img/github-white-64.png">
 										</a>
 									</li>
-									<li>
-										<a href="http://roseemmons.github.io/unit2-shopping-list/" target="_blank">
-											<img src="img/chrome-white-64.png">
-										</a>
-									</li>
+									
 								</ul>
 							</div><!-- Ends div options-container -->
 						</div>
