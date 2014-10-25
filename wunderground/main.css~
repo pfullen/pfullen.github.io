@@ -57,6 +57,14 @@ background-repeat: no-repeat;
 }
 
 
+.stack p {
+	
+color:darkred;	
+	
+}
+	
+
+
 .results-container {
 
 background-image: url('sky.jpg');	
