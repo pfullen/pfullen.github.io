@@ -101,7 +101,7 @@ text-align: center;
 	
 	padding: 5px;
 	margin: 0 auto 1em auto;
-	color:black;
+	color:darkorange;
 	font-weight: bold;
 	font-size: 25px;
 }
@@ -110,7 +110,7 @@ text-align: center;
 	
 	padding: 5px;
 	margin: 0 auto 1em auto;
-	color:black;
+	color:darkorange;
 	font-weight: bold;
 	font-size: 25px;
 }
