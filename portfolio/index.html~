@@ -126,17 +126,7 @@
 						<div class="grid-image">
 							<img src="img/streetfighter.png">
 						</div>
-						<div class="grid-hover">
-							<div class="options-container">
-								<ul class="code-or-web">
-									<li>
-										<a href="http://pfullen.github.io/streetfighter/index.html" target="_blank">
-											<img src="img/github-white-64.png">
-										</a>
-									</li>
-									
-								</ul>
-							</div><!-- Ends div options-container -->
+
 						
 					</div><!-- Ends div grid -->
 
@@ -165,17 +155,7 @@
 						<div class="grid-image">
 							<img src="img/quiz.png">
 						</div>
-						<div class="grid-hover">
-							<div class="options-container">
-								<ul class="code-or-web">
-									<li>
-										<a href="http://pfullen.github.io/quizapp/index.html" target="_blank">
-											<img src="img/github-white-64.png">
-										</a>
-									</li>
-									
-								</ul>
-							</div><!-- Ends div options-container -->
+						
 						
 					</div><!-- Ends div grid -->
 
@@ -184,17 +164,7 @@
 						<div class="grid-image">
 							<img src="img/stacker.png">
 						</div>
-						<div class="grid-hover">
-							<div class="options-container">
-								<ul class="code-or-web">
-									<li>
-										<a href="http://pfullen.github.io/stackoverflow/index.html" target="_blank">
-											<img src="img/github-white-64.png">
-										</a>
-									</li>
-									
-								</ul>
-							</div><!-- Ends div options-container -->
+						
 						
 					</div><!-- Ends div grid -->
 		
@@ -203,17 +173,7 @@
 						<div class="grid-image">
 							<img src="img/so.png">
 						</div>
-						<div class="grid-hover">
-							<div class="options-container">
-								<ul class="code-or-web">
-									<li>
-										<a href="http://pfullen.github.io/so/index.html" target="_blank">
-											<img src="img/github-white-64.png">
-										</a>
-									</li>
-									
-								</ul>
-							</div><!-- Ends div options-container -->
+						
 						
 					</div>
 
@@ -222,17 +182,7 @@
 						<div class="grid-image">
 							<img src="img/wunderAPI-index-html.png">
 						</div>
-						<div class="grid-hover">
-							<div class="options-container">
-								<ul class="code-or-web">
-									<li>
-										<a href="http://pfullen.github.io/wunderground/index.html" target="_blank">
-											<img src="img/github-white-64.png">
-										</a>
-									</li>
-									
-								</ul>
-							</div><!-- Ends div options-container -->
+						
 						
 					</div><!-- Ends div grid -->
 					
