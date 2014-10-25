@@ -12,7 +12,7 @@
 		<div class="intro">
 			<div class="left stack-image"></div>
 			<div class="explanation">
-				<h1>Weather Underground current conditions</h1>
+				<h1>Weather Underground Current Conditions API</h1>
 				<p>Weather Underground is a commercial weather service that provides real-time weather information via the Internet. Weather Underground provides weather reports for most major cities across the world on its Web site, as well as local weather reports for newspapers and Web sites. Most of its United States information comes from the National Weather Service (NWS), as information from that agency is within the public domain by federal law. The Web site is available in many languages, and an ad-free version of the site with additional features is available for an annual fee. Since 2012, it has been owned by The Weather Company, also owners of The Weather Channel.</p>
 				<p>This App makes an API call and returns weather data based on location</p>
 			</div>
@@ -97,17 +97,22 @@
 	<div class="templates hidden">
 	
 		<dl class="result weather ">
-			<dt>Location</dt>
+			<dt>Location:</dt>
 				<dd class="location"></dd>
-			<dt>Conditions</dt>
+				<br>
+			<dt>Conditions:</dt>
 				<dd class="weather"></dd>
-			<dt>Temp</dt>
+				<br>
+			<dt>Temp:</dt>
 				<dd class="temp"></dd>
-			<dt>Humidity</dt>
+				<br>
+			<dt>Humidity:</dt>
 				<dd class="humidity"></dd>
-				<dt>Wind Speed</dt>
+				<br>
+				<dt>Wind Speed:</dt>
 				<dd class="windSpeed"></dd>
-				<dt>Wind Direction</dt>
+				<br>
+				<dt>Wind Direction:</dt>
 				<dd class="windDir"></dd>
 				
 		</dl>
