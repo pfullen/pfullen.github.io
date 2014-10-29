@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>myShopping List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oswald:400:700' rel='stylesheet' type='text/css'>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+ 	 <script src="js/main.js"></script>
+         <script src="js/plugins.js"></script>
+   
+          
+    </head>
+    <body>
+   	    <header> <h1> myShopping List </h1>  </header>
+		
+		
+<section>		
+
+        	<div class="main"> 
+        	       <div id="main buttons">
+	     				 <button class="button" id="deleteAll"> </button>
+			          <button class "add" id="addButton">  </button>
+					</div>          
+			<div id='table'>          
+			
+				 <ul class="thead">				
+				 		<li > Item </li>
+				 	   <li >Qty </li> 
+				 	   <li >Type</li>
+				 	    </ul>
+				 
+				 
+			</div>	 
+				 <div id="tablebody">
+			
+			<!--
+				 <ul>
+					
+						<li > </li>
+						<li > </li>
+						<li  >Bakery</li>
+				
+						
+						 	<button class="button" id="editButton"></button> 
+							<button class="button" id="deleteButton"></button> 
+									</ul>
+				
+						<ul>
+					
+						<li > Beer</li>
+						<li  > 12</li>
+						<li  >Beverage</li>
+						
+						 	<button class="button" id="editButton"></button> 
+							<button class="button" id="deleteButton"></button> 
+							
+				</ul>
+				-->
+			  </div>
+			  	
+		
+			          	
+        	
+        	<div class="form">
+        	
+        	<form id="form1" name="form1" method="post" action="">
+        	<div class="input">
+		Item	<input id="item"type = "text" name="item" align="center">  
+	Qty	   <input id="qty" type = "text" name="qty" align = "center"> 
+        	<select align= "center">
+  <option value="Bakery">Bakery</option>
+  <option value="Produce">Produce</option>
+  <option value="Dairy">Dairy</option>
+  <option value="Household">Household</option>
+  <option value="Baking">Baking</option>
+  <option value="Cereal">Cereal</option>
+  <option value="Snacks">Snacks</option>
+  <option value="Beverages">Beverages</option>
+  <option value="Pets">Pets</option>
+  <option value="Vegetables">Canned Vegatables</option>
+  
+  <br>
+  <br>
+  
+</select>
+        	<br>
+    			</div>
+        		<button class="add2" id="formadd">  Add Item </button>
+        		<button class="add2" id="cancel">  Cancel </button>
+        	</form>
+        	
+         
+      </div>
+</section>
+		
+		
+        <footer> 
+				<p>  &copy 2014  Nautical Ambitions </p>
+        
+          </footer>
+        
+    </body>
+</html>
